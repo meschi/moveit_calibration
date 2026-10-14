@@ -37,7 +37,11 @@
 #include <moveit/handeye_calibration_rviz_plugin/handeye_control_widget.h>
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <rclcpp/rclcpp.hpp>
+#if __has_include(<moveit/utils/moveit_error_code.hpp>)
 #include <moveit/utils/moveit_error_code.hpp>
+#else
+#include <moveit/utils/moveit_error_code.h>
+#endif
 
 
 namespace moveit_rviz_plugin
